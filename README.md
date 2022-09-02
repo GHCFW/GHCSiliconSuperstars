@@ -2,17 +2,11 @@
 
 Step 1: 
 Open Compiler Explorer project link and get all unit tests to pass
-https://godbolt.org/z/7Y1eqoK3Y
+https://godbolt.org/z/8P1EcoMGE
 
 Step 2:
-Wokwi Phase 1 deployment of Blink LED
-https://wokwi.com/projects/341175578309689940
-
-Step 3:
-Wokwi Develop Toggle LED
-
-Step 4:
-Wokwi Develop Interrupt Routine Handler
+Open Wokwi project for Raspberry Pi Pico
+https://wokwi.com/projects/341664287465407060
 
 **Compiler Explorer Debug Guide:**
 
