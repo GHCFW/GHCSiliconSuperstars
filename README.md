@@ -4,18 +4,30 @@ Step 1:
 Open Compiler Explorer project link and get all unit tests to pass
 https://godbolt.org/z/W7Ke7jeev
 
-
 Step 2:
 Open Wokwi project for Raspberry Pi Pico
 https://wokwi.com/projects/341664287465407060
 
-You have a set of failing unit tests for Blink LED exercise
+Step 3:
+Follow exercise steps
+
+Exercise 1:
+You have a set of failing unit tests
 GOAL: Write minimal code to get all the tests to pass for the GPIO interface
 HINT: review code in the test to understand the expected behavior
-Program LED to Blink in main()
-Port the blink led code in main() to the Wokwi simulator project and “Deploy”
+
+Exercise 2:
+Program LED to Blink
+
+Exercise 3:
+Port the blink led code to the Wokwi simulator project and “Deploy”
+
+Exercise 4:
 Program the toggle_led() to use the hardware toggle register that will blink the LED
-Replace sleep() in main.cpp with a timer by implementing a interrupt handler routine
+
+Exercise 5:
+Implement a interrupt handler routine for timer based blinking of LED
+
 
 **Compiler Explorer Debug Guide:**
 
