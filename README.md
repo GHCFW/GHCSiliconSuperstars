@@ -1,32 +1,52 @@
 # GHC SiliconSuperstars: The star power of firmware in computing
 
-Step 1: 
-Open Compiler Explorer project link and get all unit tests to pass
-https://godbolt.org/z/W7Ke7jeev
+***Programming Exercises***
 
-Step 2:
-Open Wokwi project for Raspberry Pi Pico
-https://wokwi.com/projects/341664287465407060
+Step 1: Open Compiler Explorer project for unit testing exercises
 
-Step 3:
-Follow exercise steps
+  https://godbolt.org/z/W7Ke7jeev
 
-Exercise 1:
-You have a set of failing unit tests
-GOAL: Write minimal code to get all the tests to pass for the GPIO interface
-HINT: review code in the test to understand the expected behavior
 
-Exercise 2:
-Program LED to Blink
+Step 2: Complete Compiler Explorer Excerises below
 
-Exercise 3:
-Port the blink led code to the Wokwi simulator project and “Deploy”
+* Exercise 1:
 
-Exercise 4:
-Program the toggle_led() to use the hardware toggle register that will blink the LED
+  * You have a set of failing unit tests for the Blink LED exercise
 
-Exercise 5:
-Implement a interrupt handler routine for timer based blinking of LED
+    * **GOAL**: Write minimal source code to get all the tests to pass for the GPIO interface
+
+    * HINT: review code in the test to understand the expected behavior
+
+
+* Exercise 2: 
+
+  * Program LED to Blink in main() by updating blinkd_led() function.
+
+  * LED is ON when you write 1 to it and off when you write 0.
+
+
+Step 3: Open Wokwi project for Raspberry Pi Pico simulation
+
+  https://wokwi.com/projects/341664287465407060
+
+
+Step 4: Complete Wokwi Excerises below
+
+* Exercise 3:
+
+  * Port the blink_led code from Compiler Explorer to the Wokwi simulator project and “Deploy”
+
+
+* Exercise 4:
+
+  * Program the toggle_led() to use the hardware toggle register to blink the LED
+
+
+* Exercise 5:
+
+  * Implement an interrupt handler in the alarm_irq() to the toggle the LED
+
+    * **HINT**: Pay attention to the global alarm_fired variable
 
 
 **Compiler Explorer Debug Guide:**
@@ -42,12 +62,12 @@ Resolution: Use -DRUN_UNIT_TESTS=0 (for main code) or -DRUN_UNIT_TESTS=1 (for un
 Error: .
 Resolution: Confirm that you have the right header inclusions namely, 
 
-**Answer Key for:**
+**Answer Keys**
 
-***Compiler Explorer Exercise***
+  * ***Compiler Explorer Exercise***
+  
+    https://godbolt.org/z/esProoG99
 
-https://godbolt.org/z/esProoG99
-
-***Wokwi Exercise***
-
-https://wokwi.com/projects/342181558184051283
+  * ***Wokwi Exercise***
+  
+    https://wokwi.com/projects/342181558184051283
