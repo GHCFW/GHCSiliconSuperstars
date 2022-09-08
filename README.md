@@ -1,53 +1,54 @@
 # GHC SiliconSuperstars: The star power of firmware in computing
 
-***Programming Exercises***
+**Programming Exercises**
 
-Step 1: Open Compiler Explorer project for unit testing exercises
+* Step 1: Open Compiler Explorer project for unit testing exercises
 
   https://godbolt.org/z/W7Ke7jeev
 
 
-Step 2: Complete Compiler Explorer Excerises below
+* Step 2: Complete Compiler Explorer Excerises below
 
-* Exercise 1:
+  * Exercise 1:
 
-  * You have a set of failing unit tests for the Blink LED exercise
+    * You have a set of failing unit tests for the Blink LED exercise
 
-    * **GOAL**: Write minimal source code to get all the tests to pass for the GPIO interface
+      * **GOAL**: Write minimal source code to get all the tests to pass for the GPIO interface
 
-    * HINT: review code in the test to understand the expected behavior
-
-
-* Exercise 2: 
-
-  * Program LED to Blink in main() by updating blinkd_led() function.
-
-  * LED is ON when you write 1 to it and off when you write 0.
+      * HINT: review code in the test to understand the expected behavior
 
 
-Step 3: Open Wokwi project for Raspberry Pi Pico simulation
+  * Exercise 2: 
+
+    * Program LED to Blink in main() by updating blinkd_led() function.
+
+    * LED is ON when you write 1 to it and off when you write 0.
+
+
+* Step 3: Open Wokwi project for Raspberry Pi Pico simulation
 
   https://wokwi.com/projects/341664287465407060
 
 
-Step 4: Complete Wokwi Excerises below
+* Step 4: Complete Wokwi Excerises below
 
-* Exercise 3:
+  * Exercise 3:
 
-  * Port the blink_led code from Compiler Explorer to the Wokwi simulator project and “Deploy”
-
-
-* Exercise 4:
-
-  * Program the toggle_led() to use the hardware toggle register to blink the LED
+    * Port the blink_led code from Compiler Explorer to the Wokwi simulator project and “Deploy”
 
 
-* Exercise 5:
+  * Exercise 4:
 
-  * Implement an interrupt handler in the alarm_irq() to the toggle the LED
+    * Program the toggle_led() to use the hardware toggle register to blink the LED
 
-    * **HINT**: Pay attention to the global alarm_fired variable
 
+  * Exercise 5:
+
+    * Implement an interrupt handler in the alarm_irq() to the toggle the LED
+
+      * **HINT**: Pay attention to the global alarm_fired variable
+
+<br>
 
 **Compiler Explorer Debug Guide:**
 
@@ -57,10 +58,14 @@ Resolution: Change the compiler to x86-64 gcc 10.2 and in "Libraries" add Catch2
 Error: Running main code instead of unit tests or vice versa. 
 Resolution: Use -DRUN_UNIT_TESTS=0 (for main code) or -DRUN_UNIT_TESTS=1 (for unit tests) in Tree=>CMake options
 
+<br>
+
 **Wokwi Debug Guide:**
 
 Error: .
 Resolution: Confirm that you have the right header inclusions namely, 
+
+<br>
 
 **Answer Keys**
 
