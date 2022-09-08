@@ -1,5 +1,23 @@
 # GHC SiliconSuperstars: The star power of firmware in computing
 
+<br>
+
+**GPIOs**
+* GPIO stands for General Purpose I/O
+* It is an interface that allows the processor to connect to external peripherals
+* It can be programmed through software using the SIO interface
+  * Check out **gpio_registers_t** struct in **gpio.h** for a list of registers we will be using in the programming exercise
+
+* APIs we will be working on:
+
+  1. Enable the pin: 									     **gpio_init**
+  1. Change the direction of a given pin: 	**gpio_set_dir**
+  1. Get the direction of a given pin: 		**gpio_get_dir**
+  1. Write to the gpio pin: 							 **gpio_put**
+  1. Read from a gpio pin: 							  **gpio_get**
+
+<br>
+
 **Programming Exercises**
 
 * Step 1: Open Compiler Explorer project for unit testing exercises
