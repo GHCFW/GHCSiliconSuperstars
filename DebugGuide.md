@@ -24,3 +24,11 @@ Running main code instead of unit tests or vice versa.
 
 **Resolution:**
 Use -DRUN_UNIT_TESTS=0 (for main code) or -DRUN_UNIT_TESTS=1 (for unit tests) in Tree=>CMake options
+
+<br>
+
+**Error:**
+Build failed
+  
+**Resolution 1:**
+Compiler Explorer ran fast enough to not capture latest changes. Hit the replay/clear cache and compile button at the bottom window to rerun manually.
