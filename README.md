@@ -60,7 +60,7 @@ Follow along here:
 ## **Exercise 2: Develop an API for the GPIO library**
 
 Follow along here: 
-	https://godbolt.org/z/s8edYcKfK 
+	https://godbolt.org/z/K6b4TTq4o 
 	
 GOAL: Develop an API for gpio_set_dir(uint gpio, bool direction)
 
@@ -123,7 +123,7 @@ gpio_oe = 0x5 [101 in binary] means:
   
   * ***Compiler Explorer Exercise***
   
-    https://godbolt.org/z/4sb5W1GzK 
+    https://godbolt.org/z/r3heqbhY3 
     
 <br>
 
@@ -139,12 +139,14 @@ https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 <br>
 https://github.com/raspberrypi/pico-examples
 
+
 <br>
 Unit Testing:
 <br>
 https://en.wikipedia.org/wiki/Test-driven_development
 <br>
 https://en.wikipedia.org/wiki/Unit_testing
+<br>
 
 <br>
 Memory Mapped I/O:
