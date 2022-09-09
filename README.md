@@ -68,7 +68,7 @@ Follow along here:
 
 
 
-## **GPIOs**
+# **GPIOs**
 * GPIO stands for General Purpose I/O
 * It is an interface that allows the processor to connect to external peripherals
 * It can be programmed through software using the SIO interface
