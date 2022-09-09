@@ -60,7 +60,7 @@ Follow along here:
 ## **Exercise 2: Develop an API for the GPIO library**
 
 Follow along here: 
-	https://godbolt.org/z/K6b4TTq4o 
+	https://godbolt.org/z/3GbodxrWE 
 	
 GOAL: Develop an API for gpio_set_dir(uint gpio, bool direction)
 
@@ -103,6 +103,6 @@ gpio_oe = 0x5 [101 in binary] means:
   
   * ***Compiler Explorer Exercise***
   
-    https://godbolt.org/z/r3heqbhY3 
+    https://godbolt.org/z/6EzM8KMYY 
     
 <br>
