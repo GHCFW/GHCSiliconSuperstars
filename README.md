@@ -2,65 +2,73 @@
 
 <br>
 
-**Programming Exercises**
+# **Programming Exercises**
 
-Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico
-https://wokwi.com/projects/342282251373904466
+## **Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico**
 
-    * Program LED to Blink by updating blink_led() function.
+	https://wokwi.com/projects/342282251373904466
+  
+* Exercise 1.1: Use gpio_init that programs GPIO pin to LED_PIN
 
-    * LED is ON when you write 1 to it and off when you write 0.
-// Exercise 1.1: Use gpio_init that programs GPIO pin to LED_PIN
-// Exercise 1.2: Use gpio_set_dir that programs direction of LED_PIN to GPIO_OUT
-// Exercise 1.3: Use gpio_put and drive LED to ON and OFF
+	```
+	/*
+    	Initialize the given GPIO by:
+    	- Clear the output enable (i.e. set to input). 
+    	- Clear the output value for the given GPIO
+    	@params[in]: gpio   GPIO number
+    	@return:     none
+	*/
+	void gpio_init(uint32_t gpio);
+	```
+* Exercise 1.2: Use gpio_set_dir that programs direction of LED_PIN to GPIO_OUT
 
-/*
-    Initialize the given GPIO by:
-    - Clear the output enable (i.e. set to input). 
-    - Clear the output value for the given GPIO
-    @params[in]: gpio   GPIO number
-    @return:     none
-*/
-void gpio_init(uint32_t gpio);
+	```
+	/*
+    	Set a single GPIO direction as input or output
 
-/*
-    Set a single GPIO direction as input or output
+    	@params[in]: gpio       GPIO pin number
+    	@params[in]: direction  true for out, false for in
+    	@return:     none
+	*/
+	void gpio_set_dir(uint32_t gpio, bool direction);
+	```
 
-    @params[in]: gpio       GPIO pin number
-    @params[in]: direction  true for out, false for in
-    @return:     none
-*/
-void gpio_set_dir(uint32_t gpio, bool direction);
+* Exercise 1.3: Use gpio_put and drive LED to ON and OFF
 
-/*
-    Drive a single GPIO high/low.
-    @param[in]: gpio    GPIO pin number
-    @param[in]: value   false: clear the pin,
-                        true: set the pin
-    @return: none
-*/
-void gpio_put(uint32_t gpio, bool value);
+	```
+	/*
+    	Drive a single GPIO high/low.
+    	@param[in]: gpio    GPIO pin number
+    	@param[in]: value   false: clear the pin,
+                            true: set the pin
+    	@return: none
+	*/
+	void gpio_put(uint32_t gpio, bool value);
+	```
 
-/*
-    Wait for the given number of milliseconds before returning.
-    @param[in]: ms      the number of milliseconds to sleep
+* Exercise 1.4: Use sleep_ms() to add some delay in between different LED states
 
-*/
-void sleep_ms	(uint32_t ms);	
+	```
+	/*
+    	Wait for the given number of milliseconds before returning.
+    	@param[in]: ms      the number of milliseconds to sleep
 
-Exercise 2: Develop an API for the GPIO library
+	*/
+	void sleep_ms	(uint32_t ms);	
+	```
 
-Follow along here: https://godbolt.org/z/s8edYcKfK 
+## **Exercise 2: Develop an API for the GPIO library**
 
-      * You have a set of failing unit tests that checks for the functionality of gpio_set_dir() function
-      * **GOAL**: Write minimal source code to get all the tests to pass
-      * HINT: Start with fixing one REQUIRE at a time
+Follow along here: 
+	https://godbolt.org/z/s8edYcKfK 
+
+* You have a set of failing unit tests that checks for the functionality of gpio_set_dir() function
+* GOAL: Write minimal source code to get all the tests to pass
+* HINT: Start with fixing one REQUIRE at a time
 
 
 
-<br>
-
-**GPIOs**
+## **GPIOs**
 * GPIO stands for General Purpose I/O
 * It is an interface that allows the processor to connect to external peripherals
 * It can be programmed through software using the SIO interface
