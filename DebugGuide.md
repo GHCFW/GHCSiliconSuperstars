@@ -1,7 +1,7 @@
 **Wokwi Debug Guide**
 
 Error:
-!(/Wokwi missing pico stdlib header include.PNG)
+!(/WokwiMissingPicoInclude.PNG)
 
 Resolution: Add <#include "pico/stdlib.h"> in the top header include
 
