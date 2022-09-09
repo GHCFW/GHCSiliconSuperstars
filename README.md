@@ -61,11 +61,40 @@
 
 Follow along here: 
 	https://godbolt.org/z/s8edYcKfK 
+	
+GOAL: Develop an API for gpio_set_dir(uint gpio, bool direction)
 
-* You have a set of failing unit tests that checks for the functionality of gpio_set_dir() function
-* GOAL: Write minimal source code to get all the tests to pass
-* HINT: Start with fixing one REQUIRE at a time
+* You have a set of failing unit tests that checks for the functionality of gpio_set_dir()
+* Write minimal source code to get all the tests to pass
+* Start with writing enough code to get one ASSERT (REQUIRE) to pass at a time
 
+Unit testing framework used for the exercises: Catch2
+
+### gpio_set_dir(uint gpio, bool direction)
+	Set the direction for a single GPIO pin
+
+	Parameters: gpio -> pin number
+		   direction -> true: the pin is programmed as an output pin 
+ 				false: the pin is programmed as an input pin
+				
+This is achieved by writing to the GPIO output enable register.
+
+### gpio_oe register
+	GPIO output enable register
+	32-bit register
+		Bits[29:0] corresponds to the pin direction for GPIO pins [29:0] respectively
+		Bit positions [31:30] are ignored by the hardware
+
+For example: 
+gpio_oe = 0x5 [101 in binary] means:
+	<br>
+		- GPIO_2 & GPIO_0 are programmed as output pins
+	<br>
+		- GPIO_29..GPIO_3 & GPIO_1 are programmed as input pins
+
+
+
+<br>
 
 
 # **GPIOs**
@@ -78,13 +107,13 @@ Follow along here:
   
   * Enable the pin: 									     ***gpio_init***
   * Change the direction of a given pin: 	***gpio_set_dir***
-      * Updates the ***gpio_oe*** register to drive the direction for the given GPIO pin
+      * Updates the *gpio_oe* register to drive the direction for the given GPIO pin
   * Get the direction of a given pin: 		***gpio_get_dir***
-      * Reads the ***gpio_oe*** register to get the direction for the given GPIO pin
+      * Reads the *gpio_oe* register to get the direction for the given GPIO pin
   * Write to the gpio pin: 							 ***gpio_put***
-      * Updates the ***gpio_out*** register to drive the output value for the given GPIO pin
+      * Updates the *gpio_out* register to drive the output value for the given GPIO pin
   * Read from a gpio pin: 							  ***gpio_get***
-      * Reads the ***gpio_in*** register to get the status of the given pin
+      * Reads the *gpio_in* register to get the status of the given pin
 
 <br>
 
