@@ -7,10 +7,46 @@
 Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico
 https://wokwi.com/projects/342282251373904466
 
-    * Program LED to Blink in main() by updating blinkd_led() function.
+    * Program LED to Blink by updating blink_led() function.
 
     * LED is ON when you write 1 to it and off when you write 0.
+// Exercise 1.1: Use gpio_init that programs GPIO pin to LED_PIN
+// Exercise 1.2: Use gpio_set_dir that programs direction of LED_PIN to GPIO_OUT
+// Exercise 1.3: Use gpio_put and drive LED to ON and OFF
 
+/*
+    Initialize the given GPIO by:
+    - Clear the output enable (i.e. set to input). 
+    - Clear the output value for the given GPIO
+    @params[in]: gpio   GPIO number
+    @return:     none
+*/
+void gpio_init(uint32_t gpio);
+
+/*
+    Set a single GPIO direction as input or output
+
+    @params[in]: gpio       GPIO pin number
+    @params[in]: direction  true for out, false for in
+    @return:     none
+*/
+void gpio_set_dir(uint32_t gpio, bool direction);
+
+/*
+    Drive a single GPIO high/low.
+    @param[in]: gpio    GPIO pin number
+    @param[in]: value   false: clear the pin,
+                        true: set the pin
+    @return: none
+*/
+void gpio_put(uint32_t gpio, bool value);
+
+/*
+    Wait for the given number of milliseconds before returning.
+    @param[in]: ms      the number of milliseconds to sleep
+
+*/
+void sleep_ms	(uint32_t ms);	
 
 Exercise 2: Develop an API for the GPIO library
 
@@ -85,3 +121,14 @@ Resolution: Confirm that you have the right header inclusions namely,
 
       * **HINT**: Pay attention to the global alarm_fired variable
 
+
+Raspberry Pi Resources:
+https://github.com/raspberrypi/pico-sdk
+https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf
+https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
+https://github.com/raspberrypi/pico-examples
+
+
+Unit Testing:
+	https://en.wikipedia.org/wiki/Test-driven_development
+	https://en.wikipedia.org/wiki/Unit_testing
