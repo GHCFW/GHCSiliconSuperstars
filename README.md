@@ -116,19 +116,18 @@ gpio_oe = 0x5 [101 in binary] means:
       * Reads the *gpio_in* register to get the status of the given pin
 
 
-## Answer Keys
-
+# Answer Keys
+  * ***Wokwi Exercise*** 
+  
+    https://wokwi.com/projects/342301731204366931
+  
   * ***Compiler Explorer Exercise***
   
     https://godbolt.org/z/4sb5W1GzK 
-
-  * ***Wokwi Exercise*** [Update this]
-  
-    https://wokwi.com/projects/342181558184051283
     
 <br>
 
-## Additional Resources
+# Additional Resources
 
 Raspberry Pi Resources:
 <br>
@@ -139,14 +138,15 @@ https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf
 https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 <br>
 https://github.com/raspberrypi/pico-examples
+
 <br>
-
-
 Unit Testing:
 <br>
 https://en.wikipedia.org/wiki/Test-driven_development
 <br>
 https://en.wikipedia.org/wiki/Unit_testing
 
+<br>
 Memory Mapped I/O:
-
+<br>
+https://en.wikipedia.org/wiki/Memory-mapped_I/O
