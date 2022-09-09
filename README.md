@@ -5,7 +5,7 @@
 **Programming Exercises**
 
 Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico
-https://wokwi.com/projects/341664287465407060
+https://wokwi.com/projects/342282251373904466
 
     * Program LED to Blink in main() by updating blinkd_led() function.
 
