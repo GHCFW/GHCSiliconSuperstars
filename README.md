@@ -14,7 +14,7 @@ https://wokwi.com/projects/341664287465407060
 
 Exercise 2: Develop an API for the GPIO library
 
-Follow along here: https://godbolt.org/z/5vEzdMEeP
+Follow along here: https://godbolt.org/z/s8edYcKfK 
 
       * You have a set of failing unit tests that checks for the functionality of gpio_set_dir() function
       * **GOAL**: Write minimal source code to get all the tests to pass
@@ -65,7 +65,7 @@ Resolution: Confirm that you have the right header inclusions namely,
 
   * ***Compiler Explorer Exercise***
   
-    https://godbolt.org/z/4Wz5TvTY3
+    https://godbolt.org/z/4sb5W1GzK 
 
   * ***Wokwi Exercise*** [Update this]
   
