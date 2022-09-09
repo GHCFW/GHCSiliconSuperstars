@@ -5,7 +5,7 @@
 # **Programming Exercises**
 
 ## **Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico**
-Follow along here: 
+Link to the exercise: 
 	https://wokwi.com/projects/342282251373904466
   
 * Exercise 1.1: Use gpio_init that programs GPIO pin to LED_PIN
@@ -59,38 +59,40 @@ Follow along here:
 
 ## **Exercise 2: Develop an API for the GPIO library**
 
-Follow along here: 
+We will be doing this exercise in an online tool called Compiler Explorer. All the required libraries and skeleton code is setup for you at the link below.
+
+Follow along here:
 	https://godbolt.org/z/3GbodxrWE 
 	
 GOAL: Develop an API for gpio_set_dir(uint gpio, bool direction)
 
-* You have a set of failing unit tests that checks for the functionality of gpio_set_dir()
-* Write minimal source code to get all the tests to pass
-* Start with writing enough code to get one ASSERT (REQUIRE) to pass at a time
+* You have a set of failing unit tests (gpio/test_gpio.cpp) that checks for the functionality of gpio_set_dir()
+* Write the source code in gpio/gpio.cpp to get all unit tests to pass
 
-Unit testing framework used for the exercises: Catch2
 
-### gpio_set_dir(uint gpio, bool direction)
-	Set the direction for a single GPIO pin
+Unit testing framework used for this exercise: [Catch2 version 3.0.0-preview](https://github.com/catchorg/Catch2)
+<br>
+You do not need to download this for this exercise as Compiler Explorer is setup to include the required libraries.
 
+### API details: gpio_set_dir(uint gpio, bool direction)
+	Set the direction for a single GPIO pin. The direction refers to configuring the GPIO pin as an input or an output pin.
+	
 	Parameters: gpio -> pin number
 		   direction -> true: the pin is programmed as an output pin 
  				false: the pin is programmed as an input pin
 				
-This is achieved by writing to the GPIO output enable register.
+This is achieved by writing to the GPIO output enable (gpio_oe) register.
 
-### gpio_oe register
+### Register details: gpio_oe register
 	GPIO output enable register
 	32-bit register
 		Bits[29:0] corresponds to the pin direction for GPIO pins [29:0] respectively
 		Bit positions [31:30] are ignored by the hardware
 
-For example: 
+* For example: 
 gpio_oe = 0x5 [101 in binary] means:
-	<br>
-		- GPIO_2 & GPIO_0 are programmed as output pins
-	<br>
-		- GPIO_29..GPIO_3 & GPIO_1 are programmed as input pins
+	* GPIO_2 & GPIO_0 are programmed as output pins
+	* GPIO_29..GPIO_3 & GPIO_1 are programmed as input pins
 
 
 
