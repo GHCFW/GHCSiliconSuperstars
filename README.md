@@ -5,7 +5,7 @@
 # **Programming Exercises**
 
 ## **Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico**
-
+Follow along here: 
 	https://wokwi.com/projects/342282251373904466
   
 * Exercise 1.1: Use gpio_init that programs GPIO pin to LED_PIN
@@ -115,26 +115,8 @@ gpio_oe = 0x5 [101 in binary] means:
   * Read from a gpio pin: 							  ***gpio_get***
       * Reads the *gpio_in* register to get the status of the given pin
 
-<br>
 
-**Compiler Explorer Debug Guide:**
-
-Error: Compiler Error/Catch2 framework not found. 
-Resolution: Change the compiler to x86-64 gcc 10.2 and in "Libraries" add Catch2 version 3.0.0-preview2
-
-Error: Running main code instead of unit tests or vice versa. 
-Resolution: Use -DRUN_UNIT_TESTS=0 (for main code) or -DRUN_UNIT_TESTS=1 (for unit tests) in Tree=>CMake options
-
-<br>
-
-**Wokwi Debug Guide:**
-
-Error: .
-Resolution: Confirm that you have the right header inclusions namely, 
-
-<br>
-
-**Answer Keys**
+## Answer Keys
 
   * ***Compiler Explorer Exercise***
   
@@ -146,26 +128,25 @@ Resolution: Confirm that you have the right header inclusions namely,
     
 <br>
 
-* Bonus Exercises 
-    * Exercise:
-
-      * Program the toggle_led() to use the hardware toggle register to blink the LED
-
-
-    * Exercise:
-
-      * Implement an interrupt handler in the alarm_irq() to the toggle the LED
-
-      * **HINT**: Pay attention to the global alarm_fired variable
-
+## Additional Resources
 
 Raspberry Pi Resources:
+<br>
 https://github.com/raspberrypi/pico-sdk
+<br>
 https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf
+<br>
 https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
+<br>
 https://github.com/raspberrypi/pico-examples
+<br>
 
 
 Unit Testing:
-	https://en.wikipedia.org/wiki/Test-driven_development
-	https://en.wikipedia.org/wiki/Unit_testing
+<br>
+https://en.wikipedia.org/wiki/Test-driven_development
+<br>
+https://en.wikipedia.org/wiki/Unit_testing
+
+Memory Mapped I/O:
+
