@@ -6,58 +6,28 @@
 
 ## **Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico**
 Link to the exercise: 
-	https://wokwi.com/projects/342300258498249298
-    
-* Exercise 1.1: Use gpio_init that programs GPIO pin to LED_PIN
+	https://wokwi.com/projects/343013443582820946
+	    
+* Exercise 1: Blink LED complete functionality based on Basic Exercise
+
+* Exercise 2: Use gpio_togl to toggle LED 
 
 	```
-	/*
-    	Initialize the given GPIO by:
-    	- Clear the output enable (i.e. set to input). 
-    	- Clear the output value for the given GPIO
-    	@params[in]: gpio   GPIO number
-    	@return:     none
-	*/
-	void gpio_init(uint32_t gpio);
-	```
-* Exercise 1.2: Use gpio_set_dir that programs direction of LED_PIN to GPIO_OUT
 
 	```
-	/*
-    	Set a single GPIO direction as input or output
+* Bonus in Exercise 2: Notice how the LED toggles, find the bug and fix it here
 
-    	@params[in]: gpio       GPIO pin number
-    	@params[in]: direction  true for out, false for in
-    	@return:     none
-	*/
-	void gpio_set_dir(uint32_t gpio, bool direction);
+        ```
+	
+	```
+	
+* Exercise 3: Implement an interrupt handler routine to toggle the LED by using a timer
+
 	```
 
-* Exercise 1.3: Use gpio_put and drive LED to ON and OFF
-
-	```
-	/*
-    	Drive a single GPIO high/low.
-    	@param[in]: gpio    GPIO pin number
-    	@param[in]: value   false: clear the pin,
-                            true: set the pin
-    	@return: none
-	*/
-	void gpio_put(uint32_t gpio, bool value);
 	```
 
-* Exercise 1.4: Use sleep_ms() to add some delay in between different LED states
-
-	```
-	/*
-    	Wait for the given number of milliseconds before returning.
-    	@param[in]: ms      the number of milliseconds to sleep
-
-	*/
-	void sleep_ms	(uint32_t ms);	
-	```
-
-## **Exercise 2: Develop an API for the GPIO library**
+## **Exercise 2: Extension of GPIO interfaces** TBD
 
 We will be doing this exercise in an online tool called Compiler Explorer. All the required libraries and skeleton code is setup for you at the link below.
 
@@ -101,9 +71,9 @@ gpio_oe = 0x5 [101 in binary] means:
 # Answer Keys
   * ***Wokwi Exercise*** 
   
-    https://wokwi.com/projects/342301251781788242
+    https://wokwi.com/projects/343015430315573844  -- Needs addressing
   
-  * ***Compiler Explorer Exercise***
+  * ***Compiler Explorer Exercise*** TBD
    
     https://godbolt.org/z/Mf9eej8a8
 
