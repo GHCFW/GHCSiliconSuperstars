@@ -27,45 +27,6 @@ Link to the exercise:
 
 	```
 
-## **Exercise 2: Extension of GPIO interfaces** TBD
-
-We will be doing this exercise in an online tool called Compiler Explorer. All the required libraries and skeleton code is setup for you at the link below.
-
-Follow along here:
-  https://godbolt.org/z/rfsPq9vYW
-	
-GOAL: Develop an API for gpio_set_dir(uint gpio, bool direction)
-
-* You have a set of failing unit tests (gpio/test_gpio.cpp) that checks for the functionality of gpio_set_dir()
-* Write the source code in gpio/gpio.cpp to get all unit tests to pass
-
-
-Unit testing framework used for this exercise: [Catch2 version 3.0.0-preview](https://github.com/catchorg/Catch2)
-<br>
-You do not need to download this for this exercise as Compiler Explorer is setup to include the required libraries.
-
-### API details: gpio_set_dir(uint gpio, bool direction)
-	Set the direction for a single GPIO pin. The direction refers to configuring the GPIO pin as an input or an output pin.
-	
-	Parameters: gpio -> pin number
-		   direction -> true: the pin is programmed as an output pin 
- 				false: the pin is programmed as an input pin
-				
-This is achieved by writing to the GPIO output enable (gpio_oe) register.
-
-### Register details: gpio_oe register
-	GPIO output enable register
-	32-bit register
-		Bits[29:0] corresponds to the pin direction for GPIO pins [29:0] respectively
-		Bit positions [31:30] are ignored by the hardware
-
-* For example: 
-gpio_oe = 0x5 [101 in binary] means:
-	* GPIO_2 & GPIO_0 are programmed as output pins
-	* GPIO_29..GPIO_3 & GPIO_1 are programmed as input pins
-
-
-
 <br>
 
 # Answer Keys
@@ -73,8 +34,5 @@ gpio_oe = 0x5 [101 in binary] means:
   
     https://wokwi.com/projects/343015430315573844  -- Needs addressing
   
-  * ***Compiler Explorer Exercise*** TBD
-   
-    https://godbolt.org/z/Mf9eej8a8
 
 <br>
