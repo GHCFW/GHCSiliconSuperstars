@@ -38,6 +38,7 @@ Link to the exercise 5:
   * ***Wokwi Exercise*** 
   
   https://wokwi.com/projects/343319852271796818 -- Exercise 5
+  https://wokwi.com/projects/343328427822023250 -- Exercise 6
   
 
 <br>
