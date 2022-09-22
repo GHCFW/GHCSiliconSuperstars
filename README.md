@@ -5,8 +5,8 @@
 # **Programming Exercises**
 
 ## **Exercise 1: Blink an LED using Wokwi Simulator for Raspberry Pi Pico**
-Link to the exercise: 
-	https://wokwi.com/projects/342282251373904466
+Link to the exercise:
+	https://wokwi.com/projects/343525071518696020
   
 * Exercise 1.1: Use gpio_init that programs GPIO pin to LED_PIN
 
