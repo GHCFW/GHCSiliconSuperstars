@@ -62,7 +62,7 @@ Link to the exercise:
 We will be doing this exercise in an online tool called Compiler Explorer. All the required libraries and skeleton code is setup for you at the link below.
 
 Follow along here:
-	https://godbolt.org/z/3GbodxrWE 
+	https://godbolt.org/z/YvKM6Mxcs 
 	
 GOAL: Develop an API for gpio_set_dir(uint gpio, bool direction)
 
