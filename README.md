@@ -77,9 +77,9 @@ You do not need to download this for this exercise as Compiler Explorer is setup
 ### API details: gpio_set_dir(uint gpio, bool direction)
 	Set the direction for a single GPIO pin. The direction refers to configuring the GPIO pin as an input or an output pin.
 	
-	Parameters: gpio -> pin number
-		   direction -> true: the pin is programmed as an output pin 
- 				false: the pin is programmed as an input pin
+	Parameters: gpio ==> pin number
+		    direction ==> 1: the pin is programmed as an output pin 
+ 				  0: the pin is programmed as an input pin
 				
 This is achieved by writing to the GPIO output enable (gpio_oe) register.
 
