@@ -8,11 +8,11 @@
 	    
 * Exercise 1: Blink LED complete functionality based on Basic Exercise
 
-## Exercise 5: Use gpio_togl to toggle LED
-Link to the exercise 5: 
-	https://wokwi.com/projects/343327815228195412
+## Exercise 2: Use gpio_togl to toggle LED
+Link to the exercise 2: 
+	https://wokwi.com/projects/343524688716104275
 
-* The purpose of this exercise is to acheive the same end goal of blinking the LED in Exercise 1 but by using a different hardware register
+* The purpose of this exercise is to achieve the same end goal of blinking the LED in Exercise 1 but by using a different hardware register
 	* Toggling using XOR : https://www.geeksforgeeks.org/program-to-toggle-k-th-bit-of-a-number-n/
 	* Pick and use the hardware register for flipping the GPIO pin out : https://raspberrypi.github.io/pico-sdk-doxygen/sio_8h_source.html
 
@@ -20,25 +20,9 @@ Link to the exercise 5:
 	sio_hw->gpio_togl
 
 	```
-* Bonus in Exercise 2: Notice how the LED toggles, find the bug and fix it here
-
-        ```
-	
-	```
-	
-* Exercise 3: Implement an interrupt handler routine to toggle the LED by using a timer
-
-	```
-
-	```
-
 <br>
 
 # Answer Keys
-  * ***Wokwi Exercise*** 
-  
-  https://wokwi.com/projects/343319852271796818 -- Exercise 5
-  https://wokwi.com/projects/343328427822023250 -- Exercise 6
-  
-
+  ## Exercise 2: 
+  https://wokwi.com/projects/343524817170858579
 <br>
